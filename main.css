@@ -36,6 +36,7 @@ img{
 	width: 100%;
 }
 
+
 /*End global*/
 
 
@@ -102,7 +103,7 @@ img{
 /*Start header*/
 header{
 	width: 100%;
-	height: 100vh;
+	height: 40vh;
 }
 
 .top-nav{
@@ -202,6 +203,7 @@ li{
 .landing-text{
 	position: absolute;
 	top: 20rem;
+	margin-bottom: 0;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 100%;
@@ -224,27 +226,29 @@ li{
 	font-weight: 300;
 }
 
-/*End header*/
+/*END DECORAACION*/
 
 
 
 /*Start about*/
 
+#about{
+	display: inline-flex;
+	align-items: center;
+	margin-left: 25%;
+}
+.person{
+	margin-right: 100px;
+}
+
 
 .person .per{
-	position: absolute;
-	transform: translate(-50%, -50%);
-	width: 100%;
-	text-align: center;
-	top: 45rem;
-	left: 50%;
-	bottom: 0;
+	
 	height: 300px;
 	width: 300px;
 	padding: 0 0;
 	border-radius: 50%;
 	border: 10px solid rgba(256, 256, 256, .3);	
-	z-index: 1;
 }
 
 .about .container p{
@@ -397,7 +401,12 @@ li{
 .portfolio-description .cta:hover{
 	color: #2f67cd;
 }
-/*End services*/
+
+/*.portfolio-img{
+	
+}
+
+/*End portfolio*/
 
 
 
@@ -586,13 +595,203 @@ span{
 
 /*Start footer*/
 
-.copyright{
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+@media(max-height:800px){
+    footer{
+        position: relative;
+    }
+}
+
+.footer-distributed{
+    background-color: #2d2a30;
+    box-sizing: border-box;
+    widows: 100%;
+    text-align: left;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.footer-distributed .footer-left{
+    width: 30%;
+}
+
+.footer-distributed h3{
+    color: #fff;
+    margin: 0;
+	font-size: 20px;
+}
+
+.footer-distributed h3 span{
+	position: static;
+    color: #e0ac1c;
+	font-size: 20px;
+}
+.footer-distributed .footer-links{
+    color: #fff;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a{
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color: #33383b;
+    color: #fff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    margin: 0;
+
+}
+
+.footer-distributed .footer-center p span{
+    display: block;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 2;
+	position: static;
+
+}
+
+.footer-distributed .footer-center p a{
+    color: #e0ac1a;
+    text-decoration: none;
+}
+.footer-distributed .footer-right{
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+	position: static;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #33383b;
+    border-radius: 2px;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover{
+    background-color: #3f71ea;
+}
+
+.footer-links a:hover{
+    color: #3f71ea;
+}
+
+.footer-bottom{
+	padding-top: 40px;
+	background: rgba(0,0,0,0.60);
+	text-align: center;
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+@media(max-width: 880px){
+    .footer-distributed .footer-links, .footer-distributed .footer-center, .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i{
+        margin: 0;
+    }
+    .footer-distributed{
+        text-align: center;
+    }
+    #about{
+    	display: inline-block;
+    	text-align: center;
+    	align-content: center;
+
+    }
+    #about .person{
+    	margin-bottom: 60px;
+    	margin-left: 20%
+
+    }
+    #about .about-details{
+    	margin-right: 0px
+    }
+    header{
+	height: 15vh;
+	margin-top: 10px;
+    }
+    .landing-text h1{
+		font-size: 6rem;
+		margin-top: -150px
+	}
+}
+
+/*.copyright{
 	width: 100%;
 	text-align: center;
 	background-color: #16162d;
 	padding: 2rem 0;
 	position: relative;
-	font-family: "Open Sans";
 } 
 
 .footer-content{
@@ -716,6 +915,7 @@ span{
     
 	.landing-text h1{
 		font-size: 6rem;
+		margin-top: -150px
 	}
 
 	.landing-text h6{
